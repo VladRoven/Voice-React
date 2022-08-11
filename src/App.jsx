@@ -4,6 +4,7 @@ import Main from './Pages/Main';
 import Header from './Layouts/Header';
 import About from './Pages/About';
 import NotFound from './Pages/NotFound';
+import Footer from './Layouts/Footer';
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Route path="/about" element={ <About /> } />
                 <Route path="*" element={ <NotFound /> } />
             </Routes>
+            <Footer />
         </React.StrictMode>
     );
 };

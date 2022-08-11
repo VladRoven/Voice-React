@@ -5,16 +5,17 @@ import Person from '../Assets/Images/personCabinet.png';
 
 
 const Header = () => {
-    let authorization = true;
+    let authorization = false;
     const [classes, setClasses] = useState(`${ Styles.header }`);
+    const SCROLL = 100;
     
     useEffect(() => {
         let lastScroll = 0;
         const scroll = () => {
-            setClasses(window.scrollY >= 150 && window.scrollY > lastScroll ?
+            setClasses(window.scrollY >= SCROLL && window.scrollY > lastScroll ?
                 `${ Styles.header } ${ Styles.setBackground } ${ Styles.hide }` :
                 `${ Styles.header } ${ Styles.setBackground }`);
-            window.scrollY < 150 && setClasses(`${ Styles.header }`);
+            window.scrollY < SCROLL && setClasses(`${ Styles.header }`);
             lastScroll = window.scrollY;
         };
         

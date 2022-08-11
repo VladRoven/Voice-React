@@ -10,6 +10,9 @@ import ForWhatThird from '../Assets/Images/forWhat_3.png';
 import WhatToDoFirst from '../Assets/Images/whatToDo_1.png';
 import WhatToDoSecond from '../Assets/Images/whatToDo_2.png';
 import WhatToDoThird from '../Assets/Images/whatToDo_3.png';
+import WhyVoiceFirst from '../Assets/Images/whyVoice_1.png';
+import WhyVoiceSecond from '../Assets/Images/whyVoice_2.png';
+import WhyVoiceThird from '../Assets/Images/whyVoice_3.png';
 
 
 const Main = () => {
@@ -24,6 +27,7 @@ const Main = () => {
                         </Link>
                     </div>
                     <img src={ Logo } alt="Логотип" />
+                    <span></span>
                 </section>
                 <a href="#scroll" className={ Style.arrow }>
                     <div className={ Style.move }>
@@ -39,8 +43,8 @@ const Main = () => {
                         <section>
                             <img src={ ForWhatFirst } alt="" />
                             <p>
-                                Онлайн опитування це найефективніший спосіб <br />
-                                проаналізувати попит на товар і зрозуміти свою <br />
+                                Онлайн опитування це найефективніший спосіб
+                                проаналізувати попит на товар і зрозуміти свою
                                 цільову аудиторію. </p>
                         </section>
                     </article>
@@ -49,8 +53,8 @@ const Main = () => {
                         <section>
                             <img src={ ForWhatSecond } alt="" />
                             <p>
-                                Збирайте матеріал, щоб краще пізнати свого <br />
-                                клієнта, а відповідно за допомогою цієї інформації <br />
+                                Збирайте матеріал, щоб краще пізнати свого
+                                клієнта, а відповідно за допомогою цієї інформації
                                 підвищуйте прибуток. </p>
                         </section>
                     </article>
@@ -58,8 +62,8 @@ const Main = () => {
                         <section>
                             <img src={ ForWhatThird } alt="" />
                             <p>
-                                За допомогою опитувань вивчайте думки з того <br />
-                                чи іншого соціального питання різних груп <br />
+                                За допомогою опитувань вивчайте думки з того
+                                чи іншого соціального питання різних груп
                                 населення. </p>
                         </section>
                     </article>
@@ -71,27 +75,47 @@ const Main = () => {
                             <img src={ WhatToDoFirst } alt="" />
                             <h3>Створити опитування</h3>
                             <p>
-                                Зручний конструктор <br />
-                                опитувань. 3 типа <br />
-                                питань і налаштування <br />
+                                Зручний конструктор
+                                опитувань. 3 типа
+                                питань і налаштування
                                 логічних правил.</p>
                         </section>
                         <section>
                             <img src={ WhatToDoSecond } alt="" />
                             <h3>Зібрати відповіді</h3>
                             <p>
-                                Онлайн-панель з <br />
-                                великою кількістю <br />
-                                активних <br />
+                                Онлайн-панель з
+                                великою кількістю
+                                активних
                                 респондентів.</p>
                         </section>
                         <section>
                             <img src={ WhatToDoThird } alt="" />
                             <h3>Отримати результат</h3>
                             <p>
-                                Результати <br />
-                                опитування в форматі <br />
+                                Результати
+                                опитування в форматі
                                 Excel.</p>
+                        </section>
+                    </article>
+                </section>
+                <section className={ Style.whyVoice }>
+                    <h1>Чому саме Voice?</h1>
+                    <article>
+                        <section>
+                            <img src={ WhyVoiceFirst } alt="" />
+                            <h3>Простота</h3>
+                            <p>Простий інтерфейс та зручний конструктор створення опитувань</p>
+                        </section>
+                        <section>
+                            <img src={ WhyVoiceSecond } alt="" />
+                            <h3>Це безкоштовно</h3>
+                            <p>Ви економите час і гроші створюючи опитування безкоштовно</p>
+                        </section>
+                        <section>
+                            <img src={ WhyVoiceThird } alt="" />
+                            <h3>Підтримка</h3>
+                            <p>24/7 підтримка клієнтів і швидка реакція</p>
                         </section>
                     </article>
                 </section>

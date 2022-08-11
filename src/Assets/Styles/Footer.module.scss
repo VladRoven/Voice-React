@@ -1,0 +1,87 @@
+@import "Data";
+
+$heightFooter: 220px;
+
+footer {
+    width: 100%;
+    height: $heightFooter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        background: $blueOpacity;
+        width: 100vw;
+        height: $heightFooter;
+        right: 0;
+        z-index: -1;
+    }
+
+    .logo {
+        img {
+            width: 130px;
+            height: 130px;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: $white;
+            text-align: center;
+            margin-top: 12px;
+        }
+    }
+
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 26px;
+        color: $white;
+    }
+
+    a {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        color: $white;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .navigation {
+        nav {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+    }
+
+    .contact {
+        nav {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+
+            a {
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 20px;
+                    height: 14px;
+                    filter: invert(1);
+                    margin-right: 10px;
+                }
+
+                &:last-child {
+
+                    img {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
