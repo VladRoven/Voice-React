@@ -1,0 +1,228 @@
+@import "Data";
+
+.hide {
+    transform: translateY(-100%);
+
+    &:before, &:after {
+        box-shadow: 0 0 0 rgba(149, 191, 255, 0.55) !important;
+    }
+}
+
+.setBackground {
+    .logo {
+        color: $white !important;
+    }
+
+    nav {
+        a {
+            color: $white !important;
+            position: relative;
+
+            &:before {
+                background: $white !important;
+            }
+        }
+    }
+
+    &:before, &:after {
+        background: $blue;
+        box-shadow: 0 0 30px rgba(149, 191, 255, 0.55);
+    }
+
+    .noAuthorization {
+        a {
+            color: $white !important;
+            position: relative;
+
+            &:first-child {
+                &:before {
+                    background: $white !important;
+                }
+            }
+
+            &:last-child {
+                border: 1px solid $white !important;
+
+                &:hover {
+                    background: $white !important;
+                    color: $gray !important;
+                }
+            }
+        }
+    }
+
+    .authorization {
+        color: $white !important;
+
+        &:before {
+            background: $white !important;
+        }
+
+        img {
+            filter: brightness(200%);
+        }
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    max-width: 1600px;
+    transition: .5s;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 100%;
+        right: 50%;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        width: 100vw;
+        height: 100%;
+        z-index: -1;
+        left: 50%;
+        transition: .5s;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .logo {
+        text-decoration: none;
+        font-family: 'Vampiro One', cursive;
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 80px;
+        color: $blue;
+    }
+
+    nav {
+        a {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 32px;
+            font-family: 'Roboto', sans-serif;
+            color: $gray;
+            transition: .2s;
+            position: relative;
+
+            &:first-child {
+                margin-right: 67px;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -3px;
+                background: $gray;
+                visibility: hidden;
+                border-radius: 5px;
+                transform: scaleX(0);
+                transition: .2s linear;
+            }
+
+            &:hover:before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    .noAuthorization, .authorization {
+        font-style: normal;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .noAuthorization {
+        a {
+            color: $gray;
+            position: relative;
+
+            &:first-child {
+                padding: 8px 15px;
+                border-radius: 10px;
+                transition: .2s;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 58%;
+                    height: 2px;
+                    bottom: 5px;
+                    background: $gray;
+                    visibility: hidden;
+                    border-radius: 5px;
+                    transform: scaleX(0);
+                    transition: .2s linear;
+                }
+
+                &:hover:before {
+                    visibility: visible;
+                    transform: scaleX(1);
+                }
+            }
+
+            &:last-child {
+                border: 1px solid $gray;
+                padding: 8px 15px;
+                border-radius: 10px;
+                margin-left: 10px;
+                transition: .2s;
+                font-weight: 500;
+
+                &:hover {
+                    color: $white;
+                    border: 1px solid $blue;
+                    background: $blue;
+                }
+            }
+        }
+
+    }
+
+    .authorization {
+        display: flex;
+        align-items: center;
+        color: $gray;
+        position: relative;
+
+        img {
+            margin-right: 20px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 54%;
+            height: 2px;
+            bottom: 5px;
+            right: 0;
+            background: $gray;
+            visibility: hidden;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: .2s linear;
+        }
+
+        &:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+    }
+}

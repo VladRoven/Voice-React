@@ -1,0 +1,22 @@
+@import "Data";
+
+.voiceButton {
+    padding: 15px 64px;
+    background: $blue;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 29px;
+    box-shadow: 0 0 30px rgba(149, 191, 255, 0.43);
+    border-radius: 30px;
+    border: none;
+    color: $white;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 70px rgba(149, 191, 255, 0.43);
+    }
+}

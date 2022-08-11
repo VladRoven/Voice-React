@@ -1,0 +1,192 @@
+@import "Data";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 200px;
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 86px;
+        line-height: 80px;
+        text-align: right;
+        color: $blue;
+        margin-bottom: 60px;
+    }
+
+    img {
+        width: 500px;
+        height: 500px;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.arrow {
+    width: 39px;
+    height: 32px;
+    cursor: pointer;
+    margin: 160px auto 0;
+    display: block;
+
+    .move {
+        height: 100%;
+        animation: animDiv 2.5s ease forwards infinite;
+        overflow: hidden;
+    }
+
+    .notMove {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        animation: animArrow 2.5s ease forwards infinite;
+        height: 100%;
+    }
+
+    span {
+        display: inline-block;
+        height: 100%;
+        width: 3px;
+        background: $blue;
+        border-radius: 10px;
+
+        &:first-child {
+            transform: rotate(-40deg);
+            margin-left: 8px;
+        }
+
+        &:last-child {
+            margin-right: 9px;
+            transform: rotate(40deg);
+        }
+    }
+}
+
+.forWhat {
+    padding-top: 150px;
+
+    h1 {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 54px;
+        color: $blue;
+        margin-bottom: 40px;
+    }
+
+    article {
+        margin-top: 60px;
+
+        &:nth-child(4) {
+            section p {
+                color: $white;
+            }
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            width: 670px;
+
+            img {
+                width: 110px;
+                height: 110px;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 27px;
+                color: $blue;
+                margin-left: 55px;
+            }
+        }
+
+    }
+
+    div {
+        position: absolute;
+        height: 200px;
+        width: 100vw;
+        right: 0;
+        margin-top: 13px;
+        background: $blue;
+        box-shadow: 0 0 60px rgba(149, 191, 255, 0.55);
+        z-index: -1;
+    }
+}
+
+.whatToDo {
+    padding-top: 150px;
+
+    h1 {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 54px;
+        color: $blue;
+    }
+
+    article {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 120px;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 110px;
+                height: 110px;
+            }
+
+            h3 {
+                font-family: 'Roboto', sans-serif;
+                color: $blue;
+                font-size: 30px;
+                margin-top: 30px;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                text-align: center;
+                color: $blue;
+                font-size: 19px;
+                line-height: 23px;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@keyframes animArrow {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animDiv {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
