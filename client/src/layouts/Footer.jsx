@@ -1,9 +1,9 @@
 import React from 'react';
-import Style from '../Assets/Styles/Footer.module.scss';
-import Logo from '../Assets/Images/logo.png';
+import Style from '../assets/styles/Footer.module.scss';
+import Logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
-import Email from '../Assets/Images/email.png';
-import Phone from '../Assets/Images/phone.png';
+import Email from '../assets/images/email.png';
+import Phone from '../assets/images/phone.png';
 
 const Footer = () => {
     return (

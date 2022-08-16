@@ -1,0 +1,20 @@
+@import "Data";
+
+input {
+    border: none;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: $gray;
+
+    &::placeholder {
+        color: $blue;
+    }
+
+    //&:focus {
+    //    border: none;
+    //    outline: 0;
+    //}
+}

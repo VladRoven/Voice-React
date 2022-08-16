@@ -1,18 +1,17 @@
 import React from 'react';
-import Button from '../Components/Button';
-import '../Assets/Styles/Global.scss';
-import Style from '../Assets/Styles/Main.module.scss';
-import Logo from '../Assets/Images/logo.png';
+import Button from '../components/Button';
+import Style from '../assets/styles/Main.module.scss';
+import Logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
-import ForWhatFirst from '../Assets/Images/forWhat_1.png';
-import ForWhatSecond from '../Assets/Images/forWhat_2.png';
-import ForWhatThird from '../Assets/Images/forWhat_3.png';
-import WhatToDoFirst from '../Assets/Images/whatToDo_1.png';
-import WhatToDoSecond from '../Assets/Images/whatToDo_2.png';
-import WhatToDoThird from '../Assets/Images/whatToDo_3.png';
-import WhyVoiceFirst from '../Assets/Images/whyVoice_1.png';
-import WhyVoiceSecond from '../Assets/Images/whyVoice_2.png';
-import WhyVoiceThird from '../Assets/Images/whyVoice_3.png';
+import ForWhatFirst from '../assets/images/forWhat_1.png';
+import ForWhatSecond from '../assets/images/forWhat_2.png';
+import ForWhatThird from '../assets/images/forWhat_3.png';
+import WhatToDoFirst from '../assets/images/whatToDo_1.png';
+import WhatToDoSecond from '../assets/images/whatToDo_2.png';
+import WhatToDoThird from '../assets/images/whatToDo_3.png';
+import WhyVoiceFirst from '../assets/images/whyVoice_1.png';
+import WhyVoiceSecond from '../assets/images/whyVoice_2.png';
+import WhyVoiceThird from '../assets/images/whyVoice_3.png';
 
 
 const Main = () => {

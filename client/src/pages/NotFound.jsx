@@ -1,8 +1,8 @@
 import React from 'react';
-import Style from '../Assets/Styles/NotFound.module.scss';
-import Logo from '../Assets/Images/logo.png';
+import Style from '../assets/styles/NotFound.module.scss';
+import Logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
-import Button from '../Components/Button';
+import Button from '../components/Button';
 
 const NotFound = () => {
     return (

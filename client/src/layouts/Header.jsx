@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Styles from '../Assets/Styles/Header.module.scss';
-import Person from '../Assets/Images/personCabinet.png';
+import Styles from '../assets/styles/Header.module.scss';
+import Person from '../assets/images/personCabinet.png';
 
 
-const Header = () => {
-    let authorization = false;
+const Header = ({ user }) => {
     const [classes, setClasses] = useState(`${ Styles.header }`);
     const SCROLL = 100;
     
@@ -34,8 +33,8 @@ const Header = () => {
                 <Link to="/about">Про нас</Link>
             </nav>
             {
-                authorization ?
-                    <Link to="/login" className={ Styles.authorization }>
+                user ?
+                    <Link to="/cabinet" className={ Styles.authorization }>
                         <img src={ Person } alt="Person cabinet" />
                         Кабінет
                     </Link> :

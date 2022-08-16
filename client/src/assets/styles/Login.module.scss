@@ -1,0 +1,40 @@
+@import "Data";
+
+.login {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 200px;
+
+    section {
+        background: $blueOpacity;
+        box-shadow: 0 0 60px rgba(149, 191, 255, 0.35);
+        border-radius: 30px;
+        padding: 60px 45px;
+
+        h1 {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: $white;
+            font-size: 60px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+
+            div {
+                margin-top: 40px;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            input {
+                &:nth-child(2) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
