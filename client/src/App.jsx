@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './assets/styles/Global.scss';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom';
 import Main from './pages/Main';
 import Header from './layouts/Header';
 import About from './pages/About';
@@ -8,30 +8,31 @@ import NotFound from './pages/NotFound';
 import Footer from './layouts/Footer';
 import Login from './pages/Login';
 import Cabinet from './pages/Cabinet';
+import { getAuth } from './middleware/queries';
+import { useQuery } from '@tanstack/react-query';
 
 const App = () => {
-    const [user, setUser] = useState(false);
-    
-    useEffect(() => {
-        fetch('http://localhost:5000/api/user/auth')
-        .then(response => response.json())
-        .then(({ auth }) => {
-            setUser(auth);
-        });
-    }, []);
+    const { isLoading: isLoadingUser } = useQuery(['getAuth'], getAuth, {
+        refetchOnWindowFocus: false,
+        onSuccess: (data) => {
+            setUser(data?.auth);
+        }
+    });
+    const [user, setUser] = useState(undefined);
     
     return (
-        <React.StrictMode>
+        <BrowserRouter>
             <Header user={ user } />
             <Routes>
                 <Route path="/" element={ <Main /> } />
-                <Route path="/about" element={ <About /> } />
-                <Route path="/login" element={ user ? <Navigate to="/" /> : <Login onLogin={ setUser } /> } />
-                <Route path="/cabinet" element={ user ? <Cabinet /> : <Navigate to="/login" /> } />
+                {/*<Route path="/about" element={ <About /> } />*/ }
+                <Route path="/login" element={
+                    <Login isLoading={ isLoadingUser } user={ user } setUser={ setUser } /> } />
+                {/*<Route path="/cabinet" element={ user?.auth ? <Cabinet /> : <Navigate to="/login" /> } />*/ }
                 <Route path="*" element={ <NotFound /> } />
             </Routes>
             <Footer />
-        </React.StrictMode>
+        </BrowserRouter>
     );
 };
 
