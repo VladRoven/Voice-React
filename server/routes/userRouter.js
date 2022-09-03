@@ -15,7 +15,7 @@ router.get('/auth', (req, res) => {
         res.json({
             auth: false
         });
-    }, 3000);
+    }, 3330);
 });
 
 export default router;
