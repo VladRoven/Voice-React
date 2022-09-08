@@ -2,7 +2,7 @@ import React from 'react';
 import Style from '../assets/styles/Login.module.scss';
 import Button from '../components/Button';
 import Input from '../components/Input';
-import { Navigate } from 'react-router-dom';
+import { Navigate, NavLink } from 'react-router-dom';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { getAuth, login } from '../middleware/queries';
 
@@ -39,6 +39,7 @@ const Login = ({ user, setUser, setIsLoading }) => {
                         </div>
                     </form>
                 </section>
+                <NavLink to="/" className={ Style.link } reloadDocument>На головну</NavLink>
             </main>
         );
 };

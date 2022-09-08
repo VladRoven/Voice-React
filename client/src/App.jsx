@@ -12,7 +12,7 @@ import { getAuth } from './middleware/queries';
 import { useQuery } from '@tanstack/react-query';
 import Preloader from './components/Preloader';
 
-const App = () => {
+const App = ({ hidingPath }) => {
     const { isLoading: isLoadingUser } = useQuery(['getAuth'], getAuth, {
         refetchOnWindowFocus: false,
         onSuccess: (data) => {
@@ -22,7 +22,7 @@ const App = () => {
     });
     const [user, setUser] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    
+    const pathname = window.location.pathname;
     
     useEffect(() => {
         const handlerLoad = () => {
@@ -40,16 +40,17 @@ const App = () => {
     else
         return (
             <BrowserRouter>
-                <Header user={ user } />
+                { !hidingPath.includes(pathname) && <Header user={ user } /> }
                 <Routes>
                     <Route path="/" element={ <Main /> } />
                     {/*<Route path="/about" element={ <About /> } />*/ }
                     <Route path="/login" element={
-                        <Login user={ user } setUser={ setUser } setIsLoading={ setIsLoading } /> } />
+                        <Login user={ user } setUser={ setUser } setIsLoading={ setIsLoading } />
+                    } />
                     {/*<Route path="/cabinet" element={ user?.auth ? <Cabinet /> : <Navigate to="/login" /> } />*/ }
                     <Route path="*" element={ <NotFound /> } />
                 </Routes>
-                <Footer />
+                { !hidingPath.includes(pathname) && <Footer /> }
             </BrowserRouter>
         );
 };

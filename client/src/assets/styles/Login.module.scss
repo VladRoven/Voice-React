@@ -2,14 +2,19 @@
 
 .login {
     max-width: 600px;
+    height: 100vh;
     margin: 0 auto;
-    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     section {
         background: $blueOpacity;
         box-shadow: 0 0 60px rgba(149, 191, 255, 0.35);
         border-radius: 30px;
         padding: 60px 45px;
+        width: 100%;
 
         h1 {
             text-align: center;
@@ -35,6 +40,39 @@
                     margin-top: 20px;
                 }
             }
+        }
+    }
+
+    .link {
+        margin-top: 40px;
+        color: $gray;
+        font-style: normal;
+        font-weight: 400;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        line-height: 32px;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 10px;
+        transition: .2s;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 78%;
+            height: 2px;
+            bottom: 5px;
+            background: $gray;
+            visibility: hidden;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: .1s linear;
+        }
+
+        &:hover:before {
+            visibility: visible;
+            transform: scaleX(1);
         }
     }
 }
