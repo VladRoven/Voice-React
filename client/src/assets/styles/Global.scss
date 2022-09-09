@@ -5,7 +5,18 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    height: 100%;
+}
+
 #root {
     max-width: 1600px;
     margin: 0 auto;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
 }

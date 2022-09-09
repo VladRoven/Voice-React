@@ -22,12 +22,7 @@ footer {
     }
 
     .logo {
-        img {
-            width: 130px;
-            height: 130px;
-        }
-
-        p {
+        .logoSub {
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
             color: $white;

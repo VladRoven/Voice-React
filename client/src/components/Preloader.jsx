@@ -1,12 +1,11 @@
 import React from 'react';
 import Style from '../assets/styles/Preloader.module.scss';
+import Logo from './Logo';
 
 const Preloader = () => {
     return (
         <div className={ Style.preloader }>
-            <div className={ Style.circle }>
-                <p>V</p>
-            </div>
+            <Logo size={ 250 } />
         </div>
     );
 };

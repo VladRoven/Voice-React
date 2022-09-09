@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Styles from '../assets/styles/Header.module.scss';
 import Person from '../assets/images/personCabinet.png';
 
@@ -29,18 +29,18 @@ const Header = ({ user }) => {
         <header className={ classes }>
             <NavLink to="/" className={ Styles.logo }>Voice</NavLink>
             <nav>
-                <Link to="/">Головна</Link>
-                <Link to="/about">Про нас</Link>
+                <NavLink to="/" className={ Styles.link }>Головна</NavLink>
+                <NavLink to="/about" className={ Styles.link }>Про нас</NavLink>
             </nav>
             {
                 user ?
-                    <Link to="cabinet" className={ Styles.authorization }>
+                    <NavLink to="cabinet" className={ Styles.authorization }>
                         <img src={ Person } alt="Особистий кабінет" />
-                        Кабінет
-                    </Link> :
+                        <p className={ Styles.link }>Кабінет</p>
+                    </NavLink> :
                     <span className={ Styles.noAuthorization }>
-                        <Link to="login" reloadDocument>Вхід</Link>
-                        <Link to="signup" reloadDocument>Реєстрація</Link>
+                        <NavLink to="login" className={ Styles.link }>Вхід</NavLink>
+                        <NavLink to="signup">Реєстрація</NavLink>
                     </span>
             }
         </header>

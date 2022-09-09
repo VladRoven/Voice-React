@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '../components/Button';
 import Style from '../assets/styles/Main.module.scss';
-import Logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import ForWhatFirst from '../assets/images/forWhat_1.png';
 import ForWhatSecond from '../assets/images/forWhat_2.png';
@@ -12,6 +11,7 @@ import WhatToDoThird from '../assets/images/whatToDo_3.png';
 import WhyVoiceFirst from '../assets/images/whyVoice_1.png';
 import WhyVoiceSecond from '../assets/images/whyVoice_2.png';
 import WhyVoiceThird from '../assets/images/whyVoice_3.png';
+import Logo from '../components/Logo';
 
 
 const Main = () => {
@@ -24,7 +24,7 @@ const Main = () => {
                         <Button>Реєстрація</Button>
                     </Link>
                 </div>
-                <img src={ Logo } alt="Логотип" />
+                <Logo size={ 500 } />
                 <span></span>
             </section>
             <a href="#scroll" className={ Style.arrow }>

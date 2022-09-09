@@ -11,11 +11,9 @@ router.post('/login', (req, res) => {
     }, 3000);
 });
 router.get('/auth', (req, res) => {
-    setTimeout(() => {
-        res.json({
-            auth: false
-        });
-    }, 3330);
+    res.json({
+        auth: false
+    });
 });
 
 export default router;

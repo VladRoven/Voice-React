@@ -2,7 +2,9 @@ import React from 'react';
 
 const Cabinet = () => {
     return (
-        <div></div>
+        <main>
+            <p>Cabinet</p>
+        </main>
     );
 };
 

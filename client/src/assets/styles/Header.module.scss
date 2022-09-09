@@ -1,4 +1,5 @@
 @import "Data";
+@import "Link";
 
 .hide {
     transform: translateY(-100%);
@@ -51,14 +52,16 @@
     }
 
     .authorization {
-        color: $white !important;
-
-        &:before {
-            background: $white !important;
-        }
-
         img {
             filter: brightness(200%);
+        }
+
+        p {
+            color: $white !important;
+
+            &:before {
+                background: $white !important;
+            }
         }
     }
 }
@@ -109,34 +112,8 @@
 
     nav {
         a {
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 32px;
-            font-family: 'Roboto', sans-serif;
-            color: $gray;
-            transition: .2s;
-            position: relative;
-
             &:first-child {
                 margin-right: 67px;
-            }
-
-            &:before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: -3px;
-                background: $gray;
-                visibility: hidden;
-                border-radius: 5px;
-                transform: scaleX(0);
-                transition: .2s linear;
-            }
-
-            &:hover:before {
-                visibility: visible;
-                transform: scaleX(1);
             }
         }
     }
@@ -151,33 +128,6 @@
 
     .noAuthorization {
         a {
-            color: $gray;
-            position: relative;
-
-            &:first-child {
-                padding: 8px 15px;
-                border-radius: 10px;
-                transition: .2s;
-
-                &:before {
-                    content: "";
-                    position: absolute;
-                    width: 58%;
-                    height: 2px;
-                    bottom: 5px;
-                    background: $gray;
-                    visibility: hidden;
-                    border-radius: 5px;
-                    transform: scaleX(0);
-                    transition: .2s linear;
-                }
-
-                &:hover:before {
-                    visibility: visible;
-                    transform: scaleX(1);
-                }
-            }
-
             &:last-child {
                 border: 1px solid $gray;
                 padding: 8px 15px;
@@ -185,6 +135,7 @@
                 margin-left: 10px;
                 transition: .2s;
                 font-weight: 500;
+                color: $gray;
 
                 &:hover {
                     color: $white;
@@ -199,8 +150,13 @@
     .authorization {
         display: flex;
         align-items: center;
-        color: $gray;
-        position: relative;
+
+        &:hover {
+            p:before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+        }
 
         img {
             margin-right: 15px;
@@ -208,23 +164,8 @@
             height: 30px;
         }
 
-        &:before {
-            content: "";
-            position: absolute;
-            width: 54%;
-            height: 2px;
-            bottom: 5px;
-            right: 0;
-            background: $gray;
-            visibility: hidden;
-            border-radius: 5px;
-            transform: scaleX(0);
-            transition: .2s linear;
-        }
-
-        &:hover:before {
-            visibility: visible;
-            transform: scaleX(1);
+        p {
+            height: 33px;
         }
     }
 }

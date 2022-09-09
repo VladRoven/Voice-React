@@ -1,16 +1,16 @@
 import React from 'react';
 import Style from '../assets/styles/Footer.module.scss';
-import Logo from '../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import Email from '../assets/images/email.png';
 import Phone from '../assets/images/phone.png';
+import Logo from '../components/Logo';
 
 const Footer = () => {
     return (
         <footer>
             <section className={ Style.logo }>
-                <img src={ Logo } alt="Логотип" />
-                <p>Voice © 2022</p>
+                <Logo size={ 130 } />
+                <p className={ Style.logoSub }>Voice © 2022</p>
             </section>
             <section className={ Style.navigation }>
                 <h3>Сторінки</h3>

@@ -1,0 +1,19 @@
+@import "Data";
+
+.logo {
+    width: 250px;
+    height: 250px;
+    background: $blue;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+        font-family: 'Vampiro One', cursive;
+        text-align: center;
+        color: $white;
+        padding-top: 10px;
+        pointer-events: none;
+    }
+}
